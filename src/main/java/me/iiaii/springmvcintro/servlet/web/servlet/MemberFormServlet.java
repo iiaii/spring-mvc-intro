@@ -16,11 +16,11 @@ public class MemberFormServlet extends HttpServlet {
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        resp.setCharacterEncoding("utf-8");
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        response.setCharacterEncoding("utf-8");
 
-        PrintWriter writer = resp.getWriter();
+        PrintWriter writer = response.getWriter();
         writer.write(
                 "<!DOCTYPE html>\n" +
                 "<html>\n" +
