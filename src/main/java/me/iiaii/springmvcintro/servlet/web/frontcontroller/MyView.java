@@ -21,8 +21,12 @@ public class MyView {
     }
 
     public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        model.forEach(request::setAttribute);
+        setAttributes(model, request);
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
+    }
+
+    private void setAttributes(Map<String, Object> model, HttpServletRequest request) {
+        model.forEach(request::setAttribute);
     }
 }
