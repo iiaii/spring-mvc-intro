@@ -1,4 +1,4 @@
-package me.iiaii.springmvcintro.servlet.web.v1;
+package me.iiaii.springmvcintro.servlet.web.springmvc.v1;
 
 import me.iiaii.springmvcintro.servlet.domain.Member;
 import me.iiaii.springmvcintro.servlet.repository.MemberRepository;
