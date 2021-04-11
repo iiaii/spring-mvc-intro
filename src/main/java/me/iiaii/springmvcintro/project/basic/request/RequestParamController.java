@@ -1,7 +1,9 @@
 package me.iiaii.springmvcintro.project.basic.request;
 
 import lombok.extern.slf4j.Slf4j;
+import me.iiaii.springmvcintro.project.basic.HelloData;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -80,6 +82,23 @@ public class RequestParamController {
             @RequestParam Map<String, Object> paramMap
     ) {
         log.info("username={}, age={}", paramMap.get("username"), paramMap.get("age"));
+        return "ok";
+    }
+
+    // 해당 객체의 세터를 이용해서 객체 생성
+    @ResponseBody
+    @RequestMapping("/model-attribute-v1")
+    public String modelAttributeV1(@ModelAttribute HelloData helloData) {       // @ModelAttribute 생략 가능하지만 지정된 argument resolver 는 제외됨
+        log.info("helloData={}", helloData);
+
+        return "ok";
+    }
+
+    @ResponseBody
+    @RequestMapping("/model-attribute-v2")
+    public String modelAttributeV2(HelloData helloData) {       // @ModelAttribute 생략 가능하지만 지정된 argument resolver 는 제외됨
+        log.info("helloData={}", helloData);
+
         return "ok";
     }
 }
