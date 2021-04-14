@@ -1,5 +1,7 @@
-package me.iiaii.springmvcintro.project.domain.item;
+package me.iiaii.springmvcintro.project.itemservice.domain;
 
+import me.iiaii.springmvcintro.project.itemservice.domain.item.Item;
+import me.iiaii.springmvcintro.project.itemservice.domain.item.ItemRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

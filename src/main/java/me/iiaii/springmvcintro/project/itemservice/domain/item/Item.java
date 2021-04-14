@@ -1,4 +1,4 @@
-package me.iiaii.springmvcintro.project.domain.item;
+package me.iiaii.springmvcintro.project.itemservice.domain.item;
 
 import lombok.Data;
 
@@ -10,11 +10,7 @@ public class Item {
     private Integer price;
     private Integer quantity;
 
-    public Item(String itemA, int i, int i1) {
-    }
-
-    public Item(Long id, String itemName, Integer price, Integer quantity) {
-        this.id = id;
+    public Item(String itemName, Integer price, Integer quantity) {
         this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;

@@ -1,4 +1,4 @@
-package me.iiaii.springmvcintro.project.domain.item;
+package me.iiaii.springmvcintro.project.itemservice.domain.item;
 
 import org.springframework.stereotype.Repository;
 
