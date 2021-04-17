@@ -75,6 +75,8 @@ public class BasicItemController {
         return "redirect:/basic/items/" + item.getId();
     }
 
+    // redirect Attribute 값으로 요청 결과 상태와 속성 추가 가능
+    // Post Redirect Get 을 통해서 새로고침 시 post 요청이 중복 되는 것을 방지
     @PostMapping("/add")
     public String addItemV6(Item item, RedirectAttributes redirectAttributes) {
         Item savedItem = itemRepository.save(item);
